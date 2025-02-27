@@ -1,18 +1,27 @@
-<html>
-	<head>
-		<title>Codeblocks | Login</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-	</head>
-	<body>
-		<aside class="left">
-			<img src="anim.gif">
-		</aside>
-		<aside class="right">
-			<h1>Login!</h1>
-			<input type="text" name="user" placeholder="Username">
-			<input type="password" name="pass" placeholder="Password">
-			<a id="login" href="cb.html">LOGIN</a>
-		</aside>
-
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codeblocks | Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <aside class="left">
+        <img src="anim.gif" alt="Animation">
+    </aside>
+    <aside class="right">
+        <h1>Login</h1>
+        <form action="login.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">LOGIN</button>
+        </form>
+        <?php
+        if (isset($_GET['error'])) {
+            echo "<p style='color:red'>" . htmlspecialchars($_GET['error']) . "</p>";
+        }
+        ?>
+    </aside>
+</body>
 </html>
