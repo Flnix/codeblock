@@ -3,8 +3,8 @@ session_start();
 
 // Dummy credentials (Replace with database logic)
 $valid_users = [
-    "admin" => "test",
-    "user1" => "testpass"
+    "admin" => "Admin",
+    "user1" => "vanako"
 ];
 
 // Get user input
